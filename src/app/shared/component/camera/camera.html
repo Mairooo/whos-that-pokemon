@@ -1,0 +1,8 @@
+@if (permissionDenied) {
+  <div role="alert" class="alert alert-error">
+    <span>La caméra est nécessaire pour utiliser cette fonctionnalité</span>
+  </div>
+} @else if (cameraPermission) {
+  <div id="cameraPreview" class="cameraPreview"></div>
+  <button class="btn btn-primary" (click)="takePicture()">Prendre une photo</button>
+}
